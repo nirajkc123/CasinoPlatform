@@ -1,0 +1,82 @@
+.wheel-result {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin: var(--space-4) 0 var(--space-5);
+}
+
+.number-badge {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cream-100);
+    border: 2px solid rgba(244, 239, 223, 0.25);
+    flex-shrink: 0;
+    transition: box-shadow 260ms ease;
+}
+
+    .number-badge.Red {
+        background: var(--ruby-500);
+    }
+
+    .number-badge.Black {
+        background: var(--ink-950);
+    }
+
+    .number-badge.Green {
+        background: #1f6b45;
+    }
+
+    .number-badge.win-glow {
+        box-shadow: 0 0 22px rgba(233, 205, 122, 0.6);
+        border-color: var(--gold-300);
+    }
+
+.bet-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: var(--space-2);
+    margin: var(--space-3) 0 var(--space-4);
+}
+
+.bet-type-btn {
+    padding: 10px 8px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(244, 239, 223, 0.2);
+    background: transparent;
+    color: var(--cream-100);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+    .bet-type-btn:hover {
+        border-color: var(--gold-300);
+    }
+
+    .bet-type-btn.selected {
+        background: rgba(201, 162, 39, 0.18);
+        border-color: var(--gold-500);
+        color: var(--gold-300);
+    }
+
+.straight-input {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+    .straight-input input {
+        width: 80px;
+        background: var(--ink-950);
+        border: 1px solid rgba(244, 239, 223, 0.2);
+        border-radius: var(--radius-sm);
+        padding: 8px;
+        color: var(--cream-100);
+    }

@@ -1,0 +1,96 @@
+.table-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+    gap: var(--space-5);
+    padding: var(--space-6) 0 var(--space-8);
+    align-items: start;
+}
+
+@media (max-width: 860px) {
+    .table-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.felt-table {
+    padding: var(--space-6);
+}
+
+.hand-row {
+    margin: var(--space-4) 0;
+}
+
+    .hand-row .hand-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        color: var(--cream-500);
+        margin-bottom: var(--space-2);
+    }
+
+.hand-label .total {
+    color: var(--gold-300);
+    font-weight: 700;
+}
+
+.card-row {
+    display: flex;
+    gap: var(--space-2);
+    min-height: 88px;
+}
+
+.playing-card {
+    width: 58px;
+    height: 82px;
+    border-radius: var(--radius-sm);
+    background: var(--cream-100);
+    color: var(--ink-950);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.15rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.35);
+    flex-shrink: 0;
+}
+
+    .playing-card.red {
+        color: var(--ruby-500);
+    }
+
+    .playing-card .suit {
+        font-size: 1.4rem;
+        margin-top: 2px;
+    }
+
+    .playing-card.face-down {
+        background: repeating-linear-gradient(135deg, var(--felt-700), var(--felt-700) 6px, var(--felt-800) 6px, var(--felt-800) 12px);
+        border: 1px solid var(--gold-500);
+    }
+
+.table-actions {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.outcome-banner {
+    margin-top: var(--space-4);
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+}
+
+    .outcome-banner.win {
+        color: var(--gold-300);
+    }
+
+    .outcome-banner.loss {
+        color: var(--cream-500);
+    }
+
+    .outcome-banner.push {
+        color: var(--cream-300);
+    }

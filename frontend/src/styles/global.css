@@ -1,0 +1,172 @@
+@import "./tokens.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top, var(--felt-800) 0%, var(--felt-900) 55%, var(--ink-950) 100%);
+  background-attachment: fixed;
+  color: var(--cream-100);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 var(--space-3);
+  color: var(--cream-100);
+  letter-spacing: 0.2px;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+
+p {
+  margin: 0 0 var(--space-3);
+  color: var(--cream-300);
+  max-width: 62ch;
+}
+
+a {
+  color: var(--gold-300);
+  text-decoration: none;
+}
+a:hover { color: var(--gold-500); }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input, select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-300);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+.plaque {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.15)), var(--felt-800);
+  border: var(--line-hairline);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 11px 22px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-gold {
+  background: linear-gradient(180deg, var(--gold-300), var(--gold-500));
+  color: var(--ink-950);
+}
+.btn-gold:hover:not(:disabled) { background: linear-gradient(180deg, #f0dd9c, var(--gold-600)); }
+
+.btn-ghost {
+  background: transparent;
+  border-color: rgba(244, 239, 223, 0.25);
+  color: var(--cream-100);
+}
+.btn-ghost:hover:not(:disabled) { border-color: var(--gold-300); color: var(--gold-300); }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.field label {
+  font-size: 0.85rem;
+  color: var(--cream-300);
+}
+.field input {
+  background: var(--ink-950);
+  border: 1px solid rgba(244, 239, 223, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  color: var(--cream-100);
+}
+.field input:focus-visible { outline-offset: 0; }
+
+.error-banner {
+  background: rgba(154, 53, 72, 0.25);
+  border: 1px solid var(--ruby-500);
+  color: var(--cream-100);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  font-size: 0.9rem;
+}
+
+.balance-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: var(--font-display);
+  color: var(--gold-300);
+}
+.balance-chip .amount { font-size: 1.3rem; font-weight: 700; }
+.balance-chip .unit { font-size: 0.75rem; color: var(--cream-500); }
+
+table.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+table.ledger th {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  color: var(--cream-500);
+  font-weight: 600;
+  border-bottom: var(--line-hairline);
+}
+table.ledger td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid rgba(244, 239, 223, 0.08);
+  color: var(--cream-100);
+}
+table.ledger tr:last-child td { border-bottom: none; }
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.tag-win { background: rgba(201, 162, 39, 0.2); color: var(--gold-300); }
+.tag-loss { background: rgba(154, 53, 72, 0.2); color: var(--ruby-400); }
+.tag-neutral { background: rgba(244, 239, 223, 0.12); color: var(--cream-300); }

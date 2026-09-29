@@ -1,0 +1,40 @@
+:root {
+  /* Color: a real card-table palette, not a SaaS dashboard palette.
+     Deep felt green as the base, brass/gold as the one accent that
+     matters, ruby as the quiet secondary for losses/alerts only. */
+  --felt-900: #0a2b20;
+  --felt-800: #0f3a2b;
+  --felt-700: #164a37;
+  --ink-950: #061a12;
+
+  --gold-300: #e8cd7a;
+  --gold-500: #c9a227;
+  --gold-600: #a8841c;
+
+  --ruby-500: #9a3548;
+  --ruby-400: #b7566a;
+
+  --cream-100: #f4efdf;
+  --cream-300: #d9d2b8;
+  --cream-500: #a9a186;
+
+  /* Type */
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --line-hairline: 1px solid rgba(201, 162, 39, 0.35);
+}
